@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F7F4EE" />
+  <title>婚禮總召服務報價單｜Sunny Yeh Wedding</title>
+  <meta name="description" content="Sunny Yeh Wedding 婚禮總召服務報價單。婚禮當日協助現場協調、廠商對接、餐飲節奏關心、物品清點與尾款確認。" />
+  <style>
+    :root{
+      --cream:#F7F4EE;
+      --paper:#FFFEFB;
+      --ink:#2F3329;
+      --muted:#73776B;
+      --olive:#7E8760;
+      --olive-dark:#596047;
+      --gold:#D7B85B;
+      --line:#E8E1D5;
+      --soft:#EFE7D8;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--cream);
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+      line-height:1.75;
+      letter-spacing:.015em;
+    }
+    a{color:inherit}
+    .page{max-width:820px;margin:0 auto;padding:22px 16px 64px}
+    .sheet{
+      background:var(--paper);
+      border:1px solid rgba(126,135,96,.15);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 14px 42px rgba(47,51,41,.07);
+    }
+    .hero{padding:52px 36px 42px;text-align:center;position:relative}
+    .hero:before{
+      content:"";position:absolute;left:0;right:0;top:0;height:5px;
+      background:linear-gradient(90deg,var(--olive),var(--gold),var(--olive));
+    }
+    .brand{display:inline-flex;align-items:center;gap:8px;color:var(--olive);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+    .sun{width:16px;height:16px;border:2px solid var(--gold);border-radius:50%}
+    .hero h1{font-size:34px;line-height:1.3;margin:14px 0 8px;font-weight:750;letter-spacing:.04em}
+    .hero .lead{margin:0;color:var(--muted);font-size:15px}
+    .price-card{
+      margin:28px auto 0;max-width:460px;padding:22px 24px;border-radius:20px;
+      background:var(--cream);border:1px solid var(--line);
+    }
+    .price-label{font-size:12px;color:var(--olive);font-weight:700;letter-spacing:.16em}
+    .price{margin-top:3px;font-size:36px;line-height:1.25;font-weight:800;letter-spacing:.02em}
+    .price small{font-size:14px;font-weight:600;color:var(--muted)}
+    .price-note{font-size:13px;color:var(--muted);margin-top:7px}
+    .content{padding:0 36px 40px}
+    .section{padding:30px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+    .num{
+      flex:0 0 30px;width:30px;height:30px;border-radius:999px;
+      display:grid;place-items:center;background:var(--olive);color:#fff;font-size:12px;font-weight:800;
+    }
+    h2{font-size:20px;line-height:1.45;margin:0;font-weight:760;letter-spacing:.035em}
+    .sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .card{padding:18px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+    .card h3{font-size:15px;margin:0 0 8px;font-weight:760;color:var(--olive-dark)}
+    .card p{margin:0;font-size:14px;color:#4B4F45}
+    ul{margin:0;padding:0;list-style:none}
+    li{position:relative;padding:7px 0 7px 24px;font-size:14px;color:#454A40}
+    li:before{content:"✓";position:absolute;left:0;top:7px;color:var(--olive);font-weight:800}
+    .notice{
+      padding:20px;border-radius:18px;background:var(--soft);border:1px solid rgba(215,184,91,.28)
+    }
+    .notice strong{display:block;margin-bottom:8px;font-size:15px}
+    .notice p{margin:0;font-size:14px;color:#54584E}
+    .exclude{display:grid;gap:10px}
+    .exclude-item{display:flex;gap:12px;padding:13px 15px;border-radius:14px;background:#FBFAF7;border:1px solid var(--line);font-size:14px}
+    .x{color:#A16B5A;font-weight:800;line-height:1.5}
+    .addons{display:grid;gap:10px}
+    .addon{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:15px 17px;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .addon-name{font-size:14px;font-weight:700}
+    .addon-note{font-size:12px;color:var(--muted);margin-top:2px}
+    .addon-price{white-space:nowrap;font-weight:800;color:var(--olive-dark)}
+    .ending{
+      margin-top:2px;padding:26px 22px;border-radius:20px;background:var(--ink);color:#fff;text-align:center
+    }
+    .ending p{margin:0;color:rgba(255,255,255,.74);font-size:14px}
+    .ending strong{display:block;font-size:18px;margin-bottom:6px;letter-spacing:.035em}
+    .cta{
+      display:inline-block;margin-top:18px;padding:12px 20px;border-radius:999px;
+      background:var(--gold);color:#25281F;text-decoration:none;font-size:14px;font-weight:800;
+    }
+    .footer{text-align:center;padding:24px 16px 0;color:#8A8D82;font-size:11px;line-height:1.6}
+    @media(max-width:620px){
+      .page{padding:0 0 44px}.sheet{border-radius:0;border-left:0;border-right:0;box-shadow:none}
+      .hero{padding:44px 22px 34px}.hero h1{font-size:28px}.price{font-size:32px}
+      .content{padding:0 22px 32px}.section{padding:26px 0}.grid{grid-template-columns:1fr}
+      .addon{align-items:flex-start}.addon-price{font-size:14px}.ending{padding:24px 18px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="sheet">
+      <header class="hero">
+        <div class="brand"><span class="sun" aria-hidden="true"></span>Sunny Yeh Wedding</div>
+        <h1>婚禮總召服務報價單</h1>
+        <p class="lead">讓你們專心享受婚禮，把現場繁瑣細節交給 Sunny。</p>
+        <div class="price-card">
+          <div class="price-label">WEDDING DAY COORDINATOR</div>
+          <div class="price">NT$ 14,800 <small>／場</small></div>
+          <div class="price-note">婚禮當日總召服務｜實際服務內容依雙方確認為準</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="section">
+          <div class="section-head">
+            <div class="num">01</div>
+            <div><h2>總召的角色</h2><p class="sub">不是主持流程，而是讓婚禮當天有人替你接住現場細節。</p></div>
+          </div>
+          <div class="grid">
+            <div class="card"><h3>現場協調</h3><p>協助新人、家人、場地方與婚禮廠商之間的資訊對接，讓問題有人處理。</p></div>
+            <div class="card"><h3>細節確認</h3><p>確認重要物品、廠商到場與現場執行狀況，減少新人當天需要親自處理的事情。</p></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="num">02</div>
+            <div><h2>服務內容</h2><p class="sub">以婚禮現場的行政、協調與收尾工作為主。</p></div>
+          </div>
+          <ul>
+            <li>婚禮前確認當日重要聯絡窗口、廠商與現場資訊</li>
+            <li>到場後協助確認場地、相關物品與廠商進場狀況</li>
+            <li>協助新人與家人處理現場臨時需求及行政細節</li>
+            <li>與場地方、餐飲及合作廠商進行必要的現場溝通</li>
+            <li>宴會進行中協助關心上菜速度，必要時與餐廳協調節奏</li>
+            <li>協助保管、交接或確認新人事先指定的重要物品</li>
+            <li>婚宴進入送客後轉入收尾作業，協助確切清點物品</li>
+            <li>協助核對當日需支付的廠商尾款與明細</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="num">03</div>
+            <div><h2>服務界線</h2><p class="sub">總召與主持企劃團隊分工清楚，現場才不會多人下指令。</p></div>
+          </div>
+          <div class="exclude">
+            <div class="exclude-item"><span class="x">×</span><span><strong>不負責流程時間掌握。</strong> 婚宴流程推進、Cue 點與節目節奏由主持／企劃團隊負責。</span></div>
+            <div class="exclude-item"><span class="x">×</span><span><strong>不負責活動場控與舞台執行。</strong> 遊戲、儀式、進退場及活動執行由主持企劃團隊安排。</span></div>
+            <div class="exclude-item"><span class="x">×</span><span><strong>不擔任賓客動線小管家。</strong> 需要定點引導、帶位或進退場動線管理時，建議另安排現場工作人員。</span></div>
+            <div class="exclude-item"><span class="x">×</span><span><strong>證婚流程執行不屬於總召工作。</strong> 若需證婚流程控場、Cue 點或儀式執行，應由主持企劃端負責。</span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="num">04</div>
+            <div><h2>服務結束時間</h2><p class="sub">收尾完成，就是總召當日任務的終點。</p></div>
+          </div>
+          <div class="notice">
+            <strong>服務至婚宴送客階段後的收尾作業完成。</strong>
+            <p>新人開始送客後，Sunny 不陪同站在送客區，而是進行物品清點、廠商交接與尾款明細確認；上述事項完成後即結束當日服務。</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="num">05</div>
+            <div><h2>加購與其他費用</h2><p class="sub">依婚禮規模、場地與實際人力需求另外確認。</p></div>
+          </div>
+          <div class="addons">
+            <div class="addon"><div><div class="addon-name">追加現場協助夥伴</div><div class="addon-note">適合場地範圍較大、物品多或需要額外人力的婚禮</div></div><div class="addon-price">+ NT$ 3,500／位</div></div>
+            <div class="addon"><div><div class="addon-name">婚前實地場勘</div><div class="addon-note">非基本服務內容，如有需求可依地點與工作內容另行報價</div></div><div class="addon-price">另計</div></div>
+            <div class="addon"><div><div class="addon-name">外縣市車馬費</div><div class="addon-note">依婚禮地點、人員與交通安排另行確認</div></div><div class="addon-price">另計</div></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="ending">
+            <strong>婚禮當天，你們只需要好好當新人。</strong>
+            <p>剩下那些需要有人記得、確認、協調與收好的細節，就交給 Sunny。</p>
+            <a class="cta" href="mailto:sunny.weddingplanner@gmail.com?subject=%E5%A9%9A%E7%A6%AE%E7%B8%BD%E5%8F%AC%E6%9C%8D%E5%8B%99%E8%A9%A2%E5%95%8F">詢問婚禮總召檔期</a>
+          </div>
+        </section>
+      </div>
+    </article>
+    <div class="footer">Sunny Yeh Wedding · Wedding Day Coordinator<br>報價與服務內容以雙方最終確認及合約約定為準。</div>
+  </main>
+</body>
+</html>
